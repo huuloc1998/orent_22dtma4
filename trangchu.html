@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="C:\Users\nguye\OneDrive\Documents\laptrinh\trangchu.css" />
+    <title>ORENT</title>
+    <style type="trangchu.css"></style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-left">
+            <img class="logo" src="ảnh/LOGO.png" alt="Logo" width="100">
+            <ul class="nav-menu">
+                <li><a href="trangchu.html">Trang chủ </a></li>
+                <li><a href="chitiet5.html">Phòng trọ </a></li>
+                <li><a href="chitiet5.html">Căn hộ, chung cư </a></li>
+                <li><a href="chitiet5.html">Văn phòng </a></li>
+                <li><a href="chitiet5.html">Cửa hàng </a></li>
+                <li><a href="chitiet5.html">Biệt thự </a></li>
+            </ul>
+        </div>
+        <div class="header-right">
+            <div class="navbar">
+                <!-- Thanh tìm kiếm -->
+                <div class="search-bar">
+                    <span class="search-icon">&#128269;</span>
+                    <input type="text" placeholder="Tìm theo khu vực">
+                </div>
+                <!-- Khu vực thông tin bên phải -->
+                <div class="info">
+                    <div class="info-item">
+                        <span class="info-icon">&#128100;</span>
+                        <a href="dangnhap.html" class=>Đăng nhập </a>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">&#128722;</span>
+                        <span>Giỏ hàng</span>
+                    </div>
+                </div>
+            </div>
+            </div>
+          </div>
+    <div class="slider">
+      <div class="slides">
+          <div class="slide">
+              <img src="ảnh/banner.png" alt="Banner 1">
+          </div>
+          <div class="slide">
+              <img src="ảnh/banner2.jpg" alt="Banner 2">
+          </div>
+          <div class="slide">
+              <img src="ảnh/banner3.png" alt="Banner 3">
+          </div>
+          <div class="slide">
+              <img src="ảnh/banner 4.png" alt="Banner 4">
+          </div>
+      </div>
+      <div class="controls">
+          <button class="control prev">&lt;</button>
+          <button class="control next">&gt;</button>
+      </div>
+  </div>
+  
+  <script>
+      const slides = document.querySelector('.slides');
+      const slide = document.querySelectorAll('.slide');
+      const prev = document.querySelector('.prev');
+      const next = document.querySelector('.next');
+  
+      let index = 0;
+  
+      function showSlide(i) {
+          index = (i + slide.length) % slide.length; // Wrap around
+          slides.style.transform = `translateX(-${index * 100}%)`;
+      }
+  
+      prev.addEventListener('click', () => showSlide(index - 1));
+      next.addEventListener('click', () => showSlide(index + 1));
+  
+      // Auto-slide every 3 seconds
+      setInterval(() => {
+          showSlide(index + 1);
+      }, 3000);
+  </script>
+        <div class="container">
+            <!-- Card 1 -->
+            <div class="card">
+              <img src="ảnh/20211018155335-5496_wm.jpeg" alt="Example Image">
+              <div class="card-content">
+                <div class="card-title">Nhà Trần Khát Chân - Lò Đức - Kim Ngưu, gần ô tô, diện tích...</div>
+                <div class="card-price">66 triệu/ 1 tháng </div>
+                <div class="card-size">65 m²</div>
+                <div class="card-location">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
+                  </svg>
+                  Hai Bà Trưng, Hà Nội
+                </div>
+              </div>
+              <div class="card-footer">
+                <span>Đăng hôm nay</span>
+                <a href="chitietsp.html" class="contact-button">Liên hệ</a>
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="card">
+              <img src="ảnh/20220623081854-04c3_wm.jpg" alt="Example Image">
+              <div class="card-content">
+                <div class="card-title">Bán CH Q7 SG Riverside Complex - view sông - cam kết giá rẻ nhất</div>
+                <div class="card-price">80 triệu/ 1 tháng </div>
+                <div class="card-size">80 m²</div>
+                <div class="card-location">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
+                  </svg>
+                  Dự án Q7 Saigon Riverside, Đường Đào Trí, Phường Phú Thuận, Quận 7, Hồ Chí Minh
+                </div>
+              </div>
+              <div class="card-footer">
+                <span>Đăng hôm qua</span>
+                <a href="chitietsp.html" class="contact-button">Liên hệ</a>
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="card">
+              <img src="ảnh/20220623081854-98e4_wm.jpg" alt="Example Image">
+              <div class="card-content">
+                <div class="card-title">Căn hộ cao cấp Diamond Celadon City</div>
+                <div class="card-price">90 triệu/ 1 tháng </div>
+                <div class="card-size">50 m²</div>
+                <div class="card-location">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
+                  </svg>
+                  Dự án Celadon City, Đường N1, Phường Sơn Kỳ, Tân Phú, Hồ Chí Minh
+                </div>
+              </div>
+              <div class="card-footer">
+                <span>Đăng 2 ngày trước</span>
+                <a href="chitietsp.html" class="contact-button">Liên hệ</a>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <!-- Card 1 -->
+            <div class="card">
+              <img src="ảnh/20231118091401-1127_wm.jpg" alt="Example Image">
+              <div class="card-content">
+                <div class="card-title">Nhà Trần Khát Chân - Lò Đức - Kim Ngưu, gần ô tô, diện tích...</div>
+                <div class="card-price">65 triệu/ 1 tháng </div>
+                <div class="card-size">65 m²</div>
+                <div class="card-location">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
+                  </svg>
+                  Hai Bà Trưng, Hà Nội
+                </div>
+              </div>
+              <div class="card-footer">
+                <span>Đăng hôm nay</span>
+                <a href="chitietsp.html" class="contact-button">Liên hệ</a>
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="card">
+              <img src="ảnh/20240508132329-febd_wm.jpg" alt="Example Image">
+              <div class="card-content">
+                <div class="card-title">Bán căn hộ dịch vụ Thảo Điền tặng full nội thất mới 100%</div>
+                <div class="card-price">120 triệu/ 1 tháng </div>
+                <div class="card-size">180 m²</div>
+                <div class="card-location">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
+                  </svg>
+                  Phường Thảo Điền, Quận 2, Hồ Chí Minh
+                </div>
+              </div>
+              <div class="card-footer">
+                <span>Đăng hôm qua</span>
+                <a href="chitietsp.html" class="contact-button">Liên hệ</a>
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="card">
+              <img src="ảnh/20240914090738-0463_wm.jpg" alt="Example Image">
+              <div class="card-content">
+                <div class="card-title">CĂN HỘ The Beverly Solari </div>
+                <div class="card-price">60 triệu/ 1 tháng </div>
+                <div class="card-size">59 m²</div>
+                <div class="card-location">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
+                  </svg>
+                  Dự án Vinhomes Grand Park, Phường Long Thạnh Mỹ, Quận 9, Hồ Chí Minh
+                </div>
+              </div>
+              <div class="card-footer">
+                <span>Đăng 5 ngày trước</span>
+                <a href="chitietsp.html" class="contact-button">Liên hệ</a>
+              </div>
+            </div>
+          </div>
+        <div class="container">
+          <!-- Card 1 -->
+          <div class="card">
+            <img src="ảnh/20241106081616-088e_wm.jpg" alt="Example Image">
+            <div class="card-content">
+              <div class="card-title">The Opus One - Vinhomes Grand Park</div>
+              <div class="card-price">90 triệu/ 1 tháng </div>
+              <div class="card-size">65 m²</div>
+              <div class="card-location">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
+                </svg>
+                Khu đô thị Vinhomes Grand Park, Đường Nguyễn Xiển, Phường Long Thạnh Mỹ, Quận 9, Hồ Chí Minh.
+              </div>
+            </div>
+            <div class="card-footer">
+              <span>Đăng hôm nay</span>
+              <a href="chitietsp.html" class="contact-button">Liên hệ</a>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="card">
+            <img src="ảnh/20241112155522-7be1_wm.jpg" alt="Example Image">
+            <div class="card-content">
+              <div class="card-title">Nhà phố đẹp, tiện nghi, gần trung tâm...</div>
+              <div class="card-price">50 triệu/ 1 tháng </div>
+              <div class="card-size">80 m²</div>
+              <div class="card-location">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
+                </svg>
+                Phường Tây Tựu, Quận Bắc Từ Liêm, Hà Nội.
+              </div>
+            </div>
+            <div class="card-footer">
+              <span>Đăng một tuân trước </span>
+              <a href="chitietsp.html" class="contact-button">Liên hệ</a>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="card">
+            <img src="ảnh/20241123105732-8590_wm.jpg" alt="Example Image">
+            <div class="card-content">
+              <div class="card-title">Căn hộ cao cấp Lumiere Riverside 2PN, giá ưu đãi...</div>
+              <div class="card-price">80 triệu/ 1 tháng </div>
+              <div class="card-size">70 m²</div>
+              <div class="card-location">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
+                </svg>
+                Dự án Lumiere Riverside, Đường Xa Lộ Hà Nội, Phường An Phú, Quận 2, Hồ Chí Minh
+              </div>
+            </div>
+            <div class="card-footer">
+              <span>Đăng 3 ngày trước</span>
+              <a href="chitietsp.html" class="contact-button">Liên hệ</a>
+            </div>
+          </div>
+        </div>
+        <div class="support-buttons">
+          <button onclick="toggleChat()">
+              <span>Bạn cần hỗ trợ gì ?</span>
+              <img src="https://cdn-v2.didongviet.vn/files/svg/mascotcr-closed.svg" alt="Messenger">
+          </button>
+      </div>
+      
+      <div id="chatBox" class="chat-box">
+          <div class="chat-header">
+              Hỗ trợ trực tuyến
+              <button onclick="toggleChat()">&times;</button>
+          </div>
+          <div class="chat-messages" id="chatMessages">
+              <!-- Messages will appear here -->
+          </div>
+          <div class="chat-input">
+              <input type="text" id="chatInput" placeholder="Nhập tin nhắn...">
+              <button onclick="sendMessage()">Gửi</button>
+          </div>
+      </div>
+      
+      <script>
+          function toggleChat() {
+              const chatBox = document.getElementById('chatBox');
+              if (chatBox.style.display === 'none' || chatBox.style.display === '') {
+                  chatBox.style.display = 'block';
+              } else {
+                  chatBox.style.display = 'none';
+              }
+          }
+      
+          function sendMessage() {
+              const input = document.getElementById('chatInput');
+              const messages = document.getElementById('chatMessages');
+              const messageText = input.value.trim();
+      
+              if (messageText) {
+                  const message = document.createElement('div');
+                  message.textContent = messageText;
+                  message.classList.add('message', 'user');
+                  messages.appendChild(message);
+      
+                  // Simulate support response
+                  setTimeout(() => {
+                      const supportMessage = document.createElement('div');
+                      supportMessage.textContent = 'Cảm ơn bạn đã liên hệ, chúng tôi sẽ hỗ trợ bạn trong thời gian sớm nhất';
+                      supportMessage.classList.add('message', 'support');
+                      messages.appendChild(supportMessage);
+                      messages.scrollTop = messages.scrollHeight;
+                  }, 1000);
+      
+                  input.value = '';
+                  messages.scrollTop = messages.scrollHeight;
+              }
+          }
+      </script>
+    <div class="body2">
+    <div class="container">
+        <div class="left-section">
+            <div class="contact-info">
+                <img src="ảnh/LOGO.png" alt=" Logo">
+                <p><strong>CÔNG TY TNHH ORENT VIỆT NAM</strong></p>
+                <p>Địa chỉ: Tầng 26, Tòa nhà CII Tower, số 26 Bình Lợi, Phường 25, Quận Bình Thạnh, Thành phố Hồ Chí Minh, Việt Nam</p>
+                <p>Điện thoại: (028) 39309168</p>
+                <p>Tổng đài: 1900-1533</p>
+                <p>Mã số thuế: 0303883266</p>
+                <p>Ngày cấp: 15/07/2008 – Nơi cấp: Cục Thuế Hồ Chí Minh</p>
+                <p>Hộp thư góp ý: otvnfeedback@orent.com.vn</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
